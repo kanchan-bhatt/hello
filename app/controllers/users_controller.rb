@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     binding.pry
     @tabs=User.all
     @tab= User.ex(@tabs)
-    
+    @tab= @tab.to_a
   end
 
   # GET /users

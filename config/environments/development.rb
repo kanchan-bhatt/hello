@@ -35,15 +35,7 @@ config.action_mailer.default :charset => "utf-8"
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.delivery_method = :smtp
 
- # ActionMailer::Base.smtp_settings = {
-  #  :user_name => 'bhattkanchan123@gmail.com',
-   # :password => 'lifesuck',
-    #:address => 'smtp.gmail.com',
-    #:port => 587,
-    #:authentication => :'plain',
-    #:enable_starttls_auto => true,
-    #:openssl_verify_mode => 'none'
-  #}
+ 
 
   
  
@@ -55,8 +47,7 @@ config.action_mailer.default :charset => "utf-8"
      :port        =>        587,
      :domain      =>         'gmail.com',
      :user_name   =>         "bhattkanchan123@gmail.com",
-     #:password    =>         "ogskkaxgprryibtc",
-     :password => "lifesuck7",
+     :password    =>         "ogskkaxgprryibtc",
      :enable_starttls_auto => true  ,
      :authentication => :login
      
