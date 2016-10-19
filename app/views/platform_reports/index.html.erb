@@ -1,0 +1,16 @@
+<%= link_to "new report" , new_report_path %><br>
+<%= link_to "new platform", new_platform_report_path %><br>
+<%= link_to "new account", new_account_path %><br>
+
+<%= link_to "new" , new_platform_report_path %>
+
+<table>
+	<tbody>
+		<% @platform_reports.each do |platform_reports| %>
+			<tr>
+				<td><%= link_to "show", platform_reports %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+

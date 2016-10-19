@@ -1,0 +1,1 @@
+json.partial! "counterandcustoms/counterandcustom", counterandcustom: @counterandcustom

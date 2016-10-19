@@ -1,0 +1,2 @@
+json.extract! import_file, :id, :name, :cost_data_file_name, :cost_data_content_type, :cost_data_file_size, :cost_data_updated_at, :created_at, :updated_at
+json.url import_file_url(import_file, format: :json)

@@ -1,0 +1,3 @@
+class SourceReport < ApplicationRecord
+
+end

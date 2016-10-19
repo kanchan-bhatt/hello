@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @counterandcustom.name %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @counterandcustom.year %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @counterandcustom.description %>
+</p>
+
+<p>
+  <strong>Report type:</strong>
+  <%= @counterandcustom.report_type %>
+</p>
+
+<p>
+	<strong>name of user:</strong>
+	<%= @user.name %>
+</p>
+
+<%= link_to 'Edit', edit_counterandcustom_path(@counterandcustom) %> |
+<%= link_to 'Back', counterandcustoms_path %>

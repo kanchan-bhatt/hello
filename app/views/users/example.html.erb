@@ -1,0 +1,13 @@
+<table>
+<tr>
+<th>User id</th>
+<th>Name</th>
+<th>Email</th>
+</tr>
+<tr><% @tab.each do |ele| %>
+<td><%= ele.id %></td>
+<td> <%= ele.name %></td>
+<td> <%= ele.email %></td>
+<% end %>
+</tr>
+</table>

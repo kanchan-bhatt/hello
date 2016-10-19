@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Scholarly Stats</title>
+ <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+
+  </head>
+
+  <body>
+
+<div class="navbar navbar-default navbar-fixed-top top_band" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <%= image_tag("logo.png", width: '200', height: '200', alt: 'Logo', class: "img-responsive")%>
+          </a>
+        </div>
+        
+      </div>
+</div>
+
+
+     
+ <%= yield %>
+  
+  
+ <!--footer --> 
+<footer class="footer text-center">
+  <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-12"><a href="#">Terms of Use</a>  <span>|</span>  <a href="#">Privacy and Policy</a>  <span>|</span>  <a href="#">License</a>  <span>|</span>  <a href="#">Support</a></div>
+        <div class="col-xs-12 col-md-12 footer_text">© 2016 Afairs Exhibitions &amp; Media Pvt. Ltd. All rights reserved.</div>
+          <div class="col-xs-12 social_icon">
+              <a href="#" target="www.facebook.com" class="icon-button facebook">
+                 <i class="fa fa-facebook"></i><span></span></a>
+              <a href="#" target="www.twitter.com" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a>
+          </div>
+        </div>
+    </div>
+</footer>
+
+  </body>
+</html>
+
+
+

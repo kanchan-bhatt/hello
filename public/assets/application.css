@@ -1,0 +1,7 @@
+/*stylesheet_link_tag "application"*/
+
+
+config.assets.precompile += %w( bootstrap.css )
+
+stylesheet_link_tag "bootstrap"
+

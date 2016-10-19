@@ -1,0 +1,141 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Struts 2 - Login Application </title>
+</head>
+<body>
+<h2>Struts 2 - Login Application</h2>
+<actionerror />
+<form action="login.action" method="post">
+	<textfield name="username" key="label.username" size="20" />
+	<password name="password" key="label.password" size="20" />
+	<submit method="execute" key="label.login" align="center" />
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_9" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	<display-name>Struts2 Application</display-name>
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>
+			org.apache.struts2.dispatcher.FilterDispatcher
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<welcome-file-list>
+		<welcome-file>HelloWorld.jsp</welcome-file>
+	</welcome-file-list>
+
+</web-app>
+
+
+
+
+
+
+
+
+
+
+
+package com.tutorialspoint.struts2.HelloWorldAction;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class HelloWorldAction extends ActionSupport{
+   private String name;
+
+   public String execute() throws Exception {
+      if ("SECRET".equals(name))
+      {
+         return SUCCESS;
+      }else{
+         return ERROR;  
+      }
+   }
+   
+   public String getName() {
+      return name;
+   }
+
+   public void setName(String name) {
+      this.name = name;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+package com.tutorialspoint.struts2;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class HelloWorldAction extends ActionSupport{
+   private String name;
+
+   public String execute() throws Exception {
+      if ("SECRET".equals(name))
+      {
+         return "SUCCESS";
+      }else{
+         return "ERROR";  
+      }
+   }
+   
+   public String getName() {
+      return name;
+   }
+
+   public void setName(String name) {
+      this.name = name;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

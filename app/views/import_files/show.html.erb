@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong><br>
+  <%= @import_file.name %>
+</p>
+
+<p>
+  <strong>Cost data file name:</strong><br>
+  <%= @import_file.cost_data_file_name %>
+</p>
+
+<p>
+  <strong>Cost data content type:</strong><br>
+  <%= @import_file.cost_data_content_type %>
+</p>
+
+<p>
+  <strong>Cost data file size:</strong><br>
+  <%= @import_file.cost_data_file_size %>
+</p>
+
+<p>
+  <strong>Cost data updated at:</strong><br>
+  <%= @import_file.cost_data_updated_at %>
+</p>
+
+<%= link_to 'Back', import_files_path %>

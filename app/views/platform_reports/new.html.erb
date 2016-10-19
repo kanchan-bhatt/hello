@@ -1,0 +1,13 @@
+<%= form_for(:platform_report, url:  platform_reports_path) do |f| %>
+<div class="field">
+	<%= f.select :platform_id, Platform.all.collect { |p| [ p.name, p.id] } %>
+</div>
+
+<div class="field">
+	<%= f.select :report_id, Report.all.collect { |p| [ p.name , p.id ] } %>
+</div>
+
+<div class="actions">
+	<%= f.submit %>
+</div>
+<% end %>

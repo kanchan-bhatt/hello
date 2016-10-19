@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+</head>
+
+  <body data-spy="scroll" id="home">
+ 
+
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top top_band" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <%= image_tag("logo.png", width: '200', height: '100', alt: 'Logo', class: "img-responsive")%>
+          </a>
+        </div>
+
+         <div class="navbar-collapse collapse">
+            <div class=" main_menu clearfix">
+              <ul class="nav navbar-nav navbar-right">    
+
+                <li><a>
+                  <% if current_user.present? %>
+                 <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse4">Logged in as <strong><%= current_user.name %></strong></a>
+                      </h4>
+                    </div>
+                    <div id="collapse4" class="panel-collapse collapse">
+                      <ul class="list-group">
+                        <li class="list-group-item"><%= link_to "update account", edit_user_path(current_user)%></li>
+                        <li class="list-group-item"> <i> <%= link_to image_tag("login.png",width: '20', height:'20'), session_path(current_user), method: :delete  %>
+                   <% end %>
+                        </i>  logout </li>
+
+                      </ul>
+                   </div>
+
+                </a></li>             
+              </ul>
+           </div>
+        </div>
+      </div>
+    </div>
+<div style="height: 550px; position: relative;">
+<table width="100%" style="margin-bottom: 10px; position: relative; overflow: auto;">
+ <tr style="position: relative; overflow: auto; height: auto">
+ <td style="width:300px">
+
+
+<%= render 'shared/side' %>
+
+</td>
+
+<td width="75%" style="height: 550px; position: absolute; overflow: auto">
+  
+
+  <div class="span9 right_containerM" style=" margin-right:10px">
+
+<div class="clearfix"></div>
+        <ul class="breadcrumb">
+        <li><a class="color-bluish" href="root"> Home </a>
+        </li>
+        <li>Support <span>  </span></li>
+        <li>Contact Us</li>
+        </ul>
+
+
+
+        <% flash.each do |key, value| %>
+    <div class="alert alert-success"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><%= value %></div>
+    <% end %>
+
+       <!-- <h3 class="pull-left color_txt heading-margin ">Contact Us</h3> -->
+        <div class="divMargintop label label-info controls mleft" style="font-size: 17px" >Please enter your query below and it will be sent to the helpdesk</div><br/>
+
+        <div class="box">
+        <div class="labl"><h3>Contact Us</h3></div>
+         <div class="form-horizontal"> <%= form_for @message, url: cont_path do |message_form| %>
+        <!--<%= render 'shared/errors', object: @message %> -->
+              
+         <% @message.errors.full_messages.each do |msg| %>
+       <li><%= msg %></li>
+       <% end %>
+        
+          <p class="mleft"><small><i>Fields marked as <span class="red">*</span> are mandatory. </i></small></p>
+           
+          
+         
+          
+          <div style="padding-top:5px;  " class="control-group mleft2"><%= message_form.label :Subject %><span class="red">*</span>
+          <div style="margin-left:180px; margin-top:-15px" class="controls"><%= message_form.text_field :subject, placeholder: "Enter subject", required: true, class: 'form-control' %><br/></div></div>
+        
+        
+        <div class="control-group mleft2"><%= message_form.label :Query %> <span class="red">*</span> 
+         <div style=" margin-top:-25px" class="controls mleft1"><%= message_form.select  :query, options_for_select([['Select category',""],'Password problem', 'Accessing COUNTER Problem', 'Other problems'] ,:selected => 'Select category', :disabled => "Select category"), {}, required: true, class: 'form-control' %><br/></div> </div>
+        
+      <div style="padding-top:10px" class="control-group mleft2"><%= message_form.label :Message %><span class="red">*</span>
+      <div style=" margin-top:-15px" class="controls mleft1"><%= message_form.text_area :msg, placeholder: "Message", required: true, class: 'form-control'%></div></div>
+    
+     <div  class="checkbox mleft1">
+    <%= message_form.check_box :send, {  checked: true,} %> Send me a copy of mail
+      <%= message_form.submit "Send" %></div> 
+     
+  <% end %></div> 
+  </div>
+
+</div> 
+</td></tr></table>
+</div>
+
+
+
+
+
+
+<script>
+  var acc = document.getElementByClassName("accordion");
+  var i;
+  for (var i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+      this.classList.toggle("active");
+      this.nextElementSibling.classList.toggle("show");
+      collapsiblity:true;
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+                      Prefix Verb   URI Pattern                                   Controller#Action
+                     reports GET    /reports(.:format)                            reports#index
+                             POST   /reports(.:format)                            reports#create
+                  new_report GET    /reports/new(.:format)                        reports#new
+                 edit_report GET    /reports/:id/edit(.:format)                   reports#edit
+                      report GET    /reports/:id(.:format)                        reports#show
+                             PATCH  /reports/:id(.:format)                        reports#update
+                             PUT    /reports/:id(.:format)                        reports#update
+                             DELETE /reports/:id(.:format)                        reports#destroy
+           counterandcustoms GET    /counterandcustoms(.:format)                  counterandcustoms#index
+                             POST   /counterandcustoms(.:format)                  counterandcustoms#create
+        new_counterandcustom GET    /counterandcustoms/new(.:format)              counterandcustoms#new
+       edit_counterandcustom GET    /counterandcustoms/:id/edit(.:format)         counterandcustoms#edit
+            counterandcustom GET    /counterandcustoms/:id(.:format)              counterandcustoms#show
+                             PATCH  /counterandcustoms/:id(.:format)              counterandcustoms#update
+                             PUT    /counterandcustoms/:id(.:format)              counterandcustoms#update
+                             DELETE /counterandcustoms/:id(.:format)              counterandcustoms#destroy
+              source_reports GET    /source_reports(.:format)                     source_reports#index
+                             POST   /source_reports(.:format)                     source_reports#create
+           new_source_report GET    /source_reports/new(.:format)                 source_reports#new
+          edit_source_report GET    /source_reports/:id/edit(.:format)            source_reports#edit
+               source_report GET    /source_reports/:id(.:format)                 source_reports#show
+                             PATCH  /source_reports/:id(.:format)                 source_reports#update
+                             PUT    /source_reports/:id(.:format)                 source_reports#update
+                             DELETE /source_reports/:id(.:format)                 source_reports#destroy
+             requestfordemos GET    /requestfordemos(.:format)                    requestfordemos#index
+                             POST   /requestfordemos(.:format)                    requestfordemos#create
+          new_requestfordemo GET    /requestfordemos/new(.:format)                requestfordemos#new
+         edit_requestfordemo GET    /requestfordemos/:id/edit(.:format)           requestfordemos#edit
+              requestfordemo GET    /requestfordemos/:id(.:format)                requestfordemos#show
+                             PATCH  /requestfordemos/:id(.:format)                requestfordemos#update
+                             PUT    /requestfordemos/:id(.:format)                requestfordemos#update
+                             DELETE /requestfordemos/:id(.:format)                requestfordemos#destroy
+                  contact_us GET    /contact_us(.:format)                         contact_us#index
+                             POST   /contact_us(.:format)                         contact_us#create
+               new_contact_u GET    /contact_us/new(.:format)                     contact_us#new
+              edit_contact_u GET    /contact_us/:id/edit(.:format)                contact_us#edit
+                   contact_u GET    /contact_us/:id(.:format)                     contact_us#show
+                             PATCH  /contact_us/:id(.:format)                     contact_us#update
+                             PUT    /contact_us/:id(.:format)                     contact_us#update
+                             DELETE /contact_us/:id(.:format)                     contact_us#destroy
+                import_files GET    /import_files(.:format)                       import_files#index
+                             POST   /import_files(.:format)                       import_files#create
+             new_import_file GET    /import_files/new(.:format)                   import_files#new
+            edit_import_file GET    /import_files/:id/edit(.:format)              import_files#edit
+                 import_file GET    /import_files/:id(.:format)                   import_files#show
+                             PATCH  /import_files/:id(.:format)                   import_files#update
+                             PUT    /import_files/:id(.:format)                   import_files#update
+                             DELETE /import_files/:id(.:format)                   import_files#destroy
+             loginpage_index GET    /loginpage(.:format)                          loginpage#index
+                             POST   /loginpage(.:format)                          loginpage#create
+               new_loginpage GET    /loginpage/new(.:format)                      loginpage#new
+              edit_loginpage GET    /loginpage/:id/edit(.:format)                 loginpage#edit
+                   loginpage GET    /loginpage/:id(.:format)                      loginpage#show
+                             PATCH  /loginpage/:id(.:format)                      loginpage#update
+                             PUT    /loginpage/:id(.:format)                      loginpage#update
+                             DELETE /loginpage/:id(.:format)                      loginpage#destroy
+           export_file_index GET    /export_file(.:format)                        export_file#index
+                             POST   /export_file(.:format)                        export_file#create
+             new_export_file GET    /export_file/new(.:format)                    export_file#new
+            edit_export_file GET    /export_file/:id/edit(.:format)               export_file#edit
+                 export_file GET    /export_file/:id(.:format)                    export_file#show
+                             PATCH  /export_file/:id(.:format)                    export_file#update
+                             PUT    /export_file/:id(.:format)                    export_file#update
+                             DELETE /export_file/:id(.:format)                    export_file#destroy
+                     uploads GET    /uploads(.:format)                            uploads#index
+                             POST   /uploads(.:format)                            uploads#create
+                  new_upload GET    /uploads/new(.:format)                        uploads#new
+                 edit_upload GET    /uploads/:id/edit(.:format)                   uploads#edit
+                      upload GET    /uploads/:id(.:format)                        uploads#show
+                             PATCH  /uploads/:id(.:format)                        uploads#update
+                             PUT    /uploads/:id(.:format)                        uploads#update
+                             DELETE /uploads/:id(.:format)                        uploads#destroy
+            library_accounts GET    /library_accounts(.:format)                   library_accounts#index
+                             POST   /library_accounts(.:format)                   library_accounts#create
+         new_library_account GET    /library_accounts/new(.:format)               library_accounts#new
+        edit_library_account GET    /library_accounts/:id/edit(.:format)          library_accounts#edit
+             library_account GET    /library_accounts/:id(.:format)               library_accounts#show
+                             PATCH  /library_accounts/:id(.:format)               library_accounts#update
+                             PUT    /library_accounts/:id(.:format)               library_accounts#update
+                             DELETE /library_accounts/:id(.:format)               library_accounts#destroy
+             reports_masters GET    /reports_masters(.:format)                    reports_masters#index
+                             POST   /reports_masters(.:format)                    reports_masters#create
+          new_reports_master GET    /reports_masters/new(.:format)                reports_masters#new
+         edit_reports_master GET    /reports_masters/:id/edit(.:format)           reports_masters#edit
+              reports_master GET    /reports_masters/:id(.:format)                reports_masters#show
+                             PATCH  /reports_masters/:id(.:format)                reports_masters#update
+                             PUT    /reports_masters/:id(.:format)                reports_masters#update
+                             DELETE /reports_masters/:id(.:format)                reports_masters#destroy
+                    accounts GET    /accounts(.:format)                           accounts#index
+                             POST   /accounts(.:format)                           accounts#create
+                 new_account GET    /accounts/new(.:format)                       accounts#new
+                edit_account GET    /accounts/:id/edit(.:format)                  accounts#edit
+                     account GET    /accounts/:id(.:format)                       accounts#show
+                             PATCH  /accounts/:id(.:format)                       accounts#update
+                             PUT    /accounts/:id(.:format)                       accounts#update
+                             DELETE /accounts/:id(.:format)                       accounts#destroy
+                   platforms GET    /platforms(.:format)                          platforms#index
+                             POST   /platforms(.:format)                          platforms#create
+                new_platform GET    /platforms/new(.:format)                      platforms#new
+               edit_platform GET    /platforms/:id/edit(.:format)                 platforms#edit
+                    platform GET    /platforms/:id(.:format)                      platforms#show
+                             PATCH  /platforms/:id(.:format)                      platforms#update
+                             PUT    /platforms/:id(.:format)                      platforms#update
+                             DELETE /platforms/:id(.:format)                      platforms#destroy
+                        faqs GET    /faqs(.:format)                               faqs#index
+                             POST   /faqs(.:format)                               faqs#create
+                     new_faq GET    /faqs/new(.:format)                           faqs#new
+                    edit_faq GET    /faqs/:id/edit(.:format)                      faqs#edit
+                         faq GET    /faqs/:id(.:format)                           faqs#show
+                             PATCH  /faqs/:id(.:format)                           faqs#update
+                             PUT    /faqs/:id(.:format)                           faqs#update
+                             DELETE /faqs/:id(.:format)                           faqs#destroy
+                 about_index GET    /about(.:format)                              about#index
+                             POST   /about(.:format)                              about#create
+                   new_about GET    /about/new(.:format)                          about#new
+                  edit_about GET    /about/:id/edit(.:format)                     about#edit
+                       about GET    /about/:id(.:format)                          about#show
+                             PATCH  /about/:id(.:format)                          about#update
+                             PUT    /about/:id(.:format)                          about#update
+                             DELETE /about/:id(.:format)                          about#destroy
+                    sessions GET    /sessions(.:format)                           sessions#index
+                             POST   /sessions(.:format)                           sessions#create
+                 new_session GET    /sessions/new(.:format)                       sessions#new
+                edit_session GET    /sessions/:id/edit(.:format)                  sessions#edit
+                     session GET    /sessions/:id(.:format)                       sessions#show
+                             PATCH  /sessions/:id(.:format)                       sessions#update
+                             PUT    /sessions/:id(.:format)                       sessions#update
+                             DELETE /sessions/:id(.:format)                       sessions#destroy
+           account_platforms GET    /account_platforms(.:format)                  account_platforms#index
+                             POST   /account_platforms(.:format)                  account_platforms#create
+        new_account_platform GET    /account_platforms/new(.:format)              account_platforms#new
+       edit_account_platform GET    /account_platforms/:id/edit(.:format)         account_platforms#edit
+            account_platform GET    /account_platforms/:id(.:format)              account_platforms#show
+                             PATCH  /account_platforms/:id(.:format)              account_platforms#update
+                             PUT    /account_platforms/:id(.:format)              account_platforms#update
+                             DELETE /account_platforms/:id(.:format)              account_platforms#destroy
+            platform_reports GET    /platform_reports(.:format)                   platform_reports#index
+                             POST   /platform_reports(.:format)                   platform_reports#create
+         new_platform_report GET    /platform_reports/new(.:format)               platform_reports#new
+        edit_platform_report GET    /platform_reports/:id/edit(.:format)          platform_reports#edit
+             platform_report GET    /platform_reports/:id(.:format)               platform_reports#show
+                             PATCH  /platform_reports/:id(.:format)               platform_reports#update
+                             PUT    /platform_reports/:id(.:format)               platform_reports#update
+                             DELETE /platform_reports/:id(.:format)               platform_reports#destroy
+    account_platform_reports GET    /account_platform_reports(.:format)           account_platform_reports#index
+                             POST   /account_platform_reports(.:format)           account_platform_reports#create
+ new_account_platform_report GET    /account_platform_reports/new(.:format)       account_platform_reports#new
+edit_account_platform_report GET    /account_platform_reports/:id/edit(.:format)  account_platform_reports#edit
+     account_platform_report GET    /account_platform_reports/:id(.:format)       account_platform_reports#show
+                             PATCH  /account_platform_reports/:id(.:format)       account_platform_reports#update
+                             PUT    /account_platform_reports/:id(.:format)       account_platform_reports#update
+                             DELETE /account_platform_reports/:id(.:format)       account_platform_reports#destroy
+                  users_page GET    /users/page(.:format)                         users#page
+                        root GET    /                                             users#index
+             user_microposts GET    /users/:user_id/microposts(.:format)          microposts#index
+                             POST   /users/:user_id/microposts(.:format)          microposts#create
+          new_user_micropost GET    /users/:user_id/microposts/new(.:format)      microposts#new
+         edit_user_micropost GET    /users/:user_id/microposts/:id/edit(.:format) microposts#edit
+              user_micropost GET    /users/:user_id/microposts/:id(.:format)      microposts#show
+                             PATCH  /users/:user_id/microposts/:id(.:format)      microposts#update
+                             PUT    /users/:user_id/microposts/:id(.:format)      microposts#update
+                             DELETE /users/:user_id/microposts/:id(.:format)      microposts#destroy
+                       users GET    /users(.:format)                              users#index
+                             POST   /users(.:format)                              users#create
+                    new_user GET    /users/new(.:format)                          users#new
+                   edit_user GET    /users/:id/edit(.:format)                     users#edit
+                        user GET    /users/:id(.:format)                          users#show
+                             PATCH  /users/:id(.:format)                          users#update
+                             PUT    /users/:id(.:format)                          users#update
+                             DELETE /users/:id(.:format)                          users#destroy

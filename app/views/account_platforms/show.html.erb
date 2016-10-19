@@ -1,0 +1,29 @@
+
+<p id="notice"> <%= notice %> </p>
+
+<table>
+<thead>
+	<th>platform</th> <nbsp>
+	<th>account</th>
+</thead>
+<tr>
+
+<td><p>
+	<strong>
+
+	</strong>
+	<%= @account_platforms.platform.name %>
+</p></td>
+
+<td><p>
+	<strong>
+	
+	</strong>
+	<%= @account_platforms.account.name %>
+</p></td>
+
+
+</tr>
+</table>
+
+<%= link_to "back", account_platforms_path %>

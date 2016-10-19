@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Counterandcustoms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Year</th>
+      <th>Description</th>
+      <th>Report type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @counterandcustoms.each do |counterandcustom| %>
+      <tr>
+      <% binding.pry %>
+        <td><%= counterandcustom.name %></td>
+        <td><%= counterandcustom.year %></td>
+        <td><%= counterandcustom.description %></td>
+        <td><%= counterandcustom.report_type %></td>
+        <td><%= link_to 'Show', counterandcustom %></td>
+        <td><%= link_to 'Edit', edit_counterandcustom_path(counterandcustom) %></td>
+        <td><%= link_to 'Destroy', counterandcustom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Counterandcustom', new_counterandcustom_path %>
+<%= link_to 'back',loginpage_index_path %>

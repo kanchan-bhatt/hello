@@ -1,0 +1,17 @@
+
+<%= link_to "new account",new_account_path %>
+
+<%= link_to "new platform", new_platform_path %>
+
+<%= link_to "new", new_account_platform_path %>
+
+<table>
+	<tbody>
+		<% @account_platforms.each do |account_platforms| %>
+			<tr>
+				<td><%= link_to "show", account_platforms %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+

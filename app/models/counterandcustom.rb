@@ -1,0 +1,3 @@
+class Counterandcustom < ApplicationRecord
+
+end

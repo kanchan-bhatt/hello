@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Import Files</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Cost data file name</th>
+      <th>Cost data content type</th>
+      <th>Cost data file size</th>
+      <th>Cost data updated at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @import_files.each do |import_file| %>
+      <tr>
+        <td><%= import_file.name %></td>
+        <td><%= import_file.email %></td>
+        <td><%= import_file.cost_data_content_type %></td>
+        <td><%= import_file.cost_data_file_size %></td>
+        <td><%= import_file.cost_data_updated_at %></td>
+        <td><%= link_to 'Show', import_file %></td>
+        <td><%= link_to 'Edit', edit_import_file_path(import_file) %></td>
+        <td><%= link_to 'Destroy', import_file, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Import File', new_import_file_path %>

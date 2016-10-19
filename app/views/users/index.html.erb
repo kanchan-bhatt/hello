@@ -1,0 +1,523 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+</head>
+
+  <body data-spy="scroll" id="home">
+ <!--Modal for request demo -->
+<div class="modal fade my_login_box" id="Request-Demo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Request for <span>demo</span></h4>
+      </div>
+      <div class="modal-body">
+        <div class="common_form">
+               <%= form_for(:requestfordemo , url: requestfordemos_path) do |f| %>
+                
+                <div class="field">
+                  <%= f.label :username %>
+                  <%= f.text_field :username, class: 'form-control'%>
+                </div>
+
+                <div class="field">
+                  <%= f.label :email %>
+                  <%= f.text_field :email, class: 'form-control' %>
+                </div>
+
+                <div class="field">
+                  <%= f.label :library %>
+                  <%= f.text_field :library, class: 'form-control' %>
+                </div>
+
+                <div class="field">
+                  <%= f.label :number %>
+                  <%= f.number_field :number, class: 'form-control' %>
+                </div>
+
+                <div class="field">
+                  <%= f.label :message %>
+                  <%= f.text_area :message, class: 'form-control' %>
+                </div>
+
+                <div class="actions">
+                  <%= f.submit %>
+                </div>
+              <% end %>
+        </div>
+      </div>  
+    </div>
+  </div>
+</div>
+
+
+
+
+ <!--Modal for login  -->
+<div class="modal fade my_login_box" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Log <span>In</span></h4>
+      </div>
+      <div class="modal-body">
+        <div class="common_form">
+          <% provide(:title, "Log in") %>         
+                    <%= form_for(:session, url: sessions_path) do |f| %>
+               
+                     <%= f.label :email %>
+                     <%= f.email_field :email, class: 'form-control' %>
+
+ 
+                     <%= f.label :password %>
+                     <%= f.password_field :password, class: 'form-control' %>
+
+                     <%= f.submit "Log in", class: "btn btn-primary" %>
+                    <% end %>
+                    </div>
+            </div>   
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top top_band" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <%= image_tag("logo.png", width: '200', height: '200', alt: 'Logo', class: "img-responsive")%>
+          </a>
+        </div>
+        
+        <div class="navbar-collapse collapse">
+            <div class=" main_menu clearfix">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a class="scroll" href="#home"><i><%= image_tag("home.png",width: '20', height:'20') %></i>Home</a></li>
+                <li><a class="scroll" href="#reports"><i><%= image_tag("reports.jpg",width: '20', height:'20')%></i> Reports</a></li>
+                <li><a class="scroll" href="#benefits"><i><%= image_tag("benefits.jpg",width: '20', height:'20') %></i> Benefits</a></li>
+                <li><a class="scroll" href="#contact_section"><i><%= image_tag("mail.png",width: '20', height:'20') %></i> Contact Us</a></li>
+                <li><a href="#LoginModal" data-toggle="modal"><i><%= image_tag("login.png",width: '20', height:'20') %></i> Login</a></li>
+
+              </ul>
+           </div>
+        </div>
+      </div>
+    </div>
+    
+  <!-- /main_banner_section -->
+    <div class=" main_banner_section main_banner">
+        <div class="container">                      
+                    <div class="banner_text">
+                <h1>Scholarly <span>Stats</span></h1>    
+                <p>allows libraries to retrieve all customer-related information and COUNTER usage reports through a single platform.</p>
+                <a href="#Request-Demo" class="request_for_demo" data-toggle="modal"> Request for Demo <i class="fa fa-play-circle-o mrg_l_5"></i></a>
+                
+            </div>
+            
+        </div> <!-- /container -->
+  </div><!-- /main_banner_section -->
+  <br>
+    <br>
+
+    <!-- /stats_section -->
+        <div class="stats_section" >
+          <div class="container">
+                <ul>
+                    <li class="col-xs-12 col-sm-4 col-md-4">
+                      <div class="row">
+                          <div class="col-xs-4 col-md-4">
+                          <%= image_tag("publishers_icon.png", width: '200', height: '100', alt: 'publishers_icon', class: "img-responsive center-block") %>
+
+
+                          </div>
+                          <div class="col-xs-8 col-md-8 total_counts">
+                            <div class="row">
+                                <h1>2008</h1>
+                                <p>Publishers</p>
+                            </div>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="col-xs-12 col-sm-4 col-md-4">
+                      <div class="row">
+                          <div class="col-xs-4 col-md-4">
+                              <%= image_tag("books_icon.png", width: '200', height: '100', alt: 'books_icon', class: "img-responsive center-block") %>
+
+                          </div>
+                          <div class="col-xs-8 col-md-8 total_counts">
+                            <div class="row">
+                                <h1>10000</h1>
+                                <p>Books</p>
+                            </div>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="col-xs-12 col-sm-4 col-md-4">
+                      <div class="row">
+                          <div class="col-xs-4 col-md-4">
+                             <%= image_tag("journals_icon.png", width: '200', height: '100', alt: 'journals_icon', class: "img-responsive center-block") %> 
+
+                          </div>
+                          <div class="col-xs-8 col-md-8 total_counts">
+                            <div class="row">
+                                <h1>1.23 Laks</h1>
+                                <p>Journals</p>
+                            </div>
+                          </div>
+                        </div>
+                    </li>
+                </ul>   
+            </div> 
+        </div>
+
+
+<!-- /stats_section end -->
+
+    
+<!-- / reports_section -->
+
+<div class="reports_section" id="reports">
+  <div class="container">
+      <div class="report_tittle">
+          Counter Usage <span>Reports</span>
+        </div>
+        <div class="report_tittle_info">
+              <span>With our award winning reports and analytical platform,</span> you get what you want, we provide <span>all reports in all possible formats,</span> you can request for <b>customization, pull data from any given dates,</b> create your own title and package based cost per use reports, see through our advance charts and visuals what is being used and what's not in <b>your electronic resource collection, and that without wasting any minute,</b> Scholarlystats based on decade <span>old experience in electronic resource analytics came up with value added reports</span> which simply understands what librarians want from library data.
+        </div>
+        
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <div class="reports_box">
+                   <div class="reports_name">COUNTER and Custom Reports</div>
+                    <div class="reports_box_image">
+                        <%= image_tag("custom_reports_icon.png", width: '200', height: '100', alt: 'custom_reports_icon', class: "img-responsive center-block") %>
+
+
+                    </div>
+                   <div class="reports_info">
+                    Scholarlystats being one of the oldest service on COUNTER analytics know what librarian wants from its data management vendor, we provide all the Consolidated COUNTER reports in formats like xls, csv and xml, where you can find each and every publisher you are subscribed with within a COUNTER report type, itâs a click and download report feature where all reports and value added data is available for you to access anytime anywhere.
+                   </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <div class="reports_box">
+                   <div class="reports_name">Source Reports</div>
+                    <div class="reports_box_image">
+                      
+                      <%= image_tag("source_reports_icon.png", width: '200', height: '200', alt: 'source_reports_icon', class: "source_reports_icon") %>
+
+
+                    </div>
+                   <div class="reports_info">
+                    We understand the value of raw data which is supplied to you by publishers, so we have a separate section where you can refer to any publishers raw COUNTER reports from a single tool, you not need to go anywhere to refer to any raw data now, just select publisher, report type and report will be downloaded to your system.
+                   </div>
+                </div>
+            </div>
+
+<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <div class="reports_box">
+                   <div class="reports_name">Dynamic Reports</div>
+                    <div class="reports_box_image">
+                     
+                        <%= image_tag("dynamic_reports_icon.png", width: '200', height: '100', alt: 'dynamic_reports_icon', class: "img-responsive center-block") %>
+
+                    </div>
+                   <div class="reports_info">
+                    To reduce dependency on the canned data and reports, Scholarlystats bring to you Dynamic reports in COUNTER format, simply put any two given dates ranges , select report type and you get your institutions usage data instantly, this gives you freedom from combining two years data to get academic session analyzed.
+                   </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<!-- / reports_section end -->
+
+
+<!-- / benefits_section -->
+<div class="benefits_section clearfix" id="benefits">
+  <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-md-5">
+       
+        <%= image_tag("system_img.jpg", width: '545', height: '499', alt: 'system_img', class: "img-responsive") %>
+
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-7">
+      <div class="benefits_tittle">Benefits of Scholarly <span>Stats</span></div>
+        <div class="benefits_tittle_info">
+          Helps libraries to validate existing content subscriptions, analyze content inventory, and choose and acquire new content.
+        </div>
+        
+        <ul class="list_style">
+          <li>Helps libraries in streamlining the process of title selection.</li>
+            <li>Option to choose from COUNTER and a variety of custom reports.</li>
+            <li>Helps libraries to validate existing content subscriptions, analyze content inventory,
+and choose and acquire new content.</li>
+            <li>Cloud-based reporting with 24 x 7 support.</li>
+            <li>Easy comparison of performance of various e-packages.</li>
+            <li>Automated data harvesting through SUSHI.</li>
+            <li>New business opportunities because of enhanced capabilities.</li>
+        </ul>
+        
+    </div>
+    </div>
+    </div>
+</div>
+
+<!-- / benefits_section_end -->
+
+<!-- / affiliated_by_section -->
+<div class="affiliated_by_section clearfix">
+  <div class="container">
+          <%= image_tag("ala.gif", class: "mrg_l_r") %>
+          <%= image_tag("dnv_gl.gif") %>
+          <%= image_tag("counter.gif") %>
+          <%= image_tag("iso_9001_iso_iec_27001.gif") %>
+          <%= image_tag("panacea.gif") %>
+    
+    </div>
+</div>
+<!-- / affiliated_by_section_end -->
+
+
+<!-- / clients_section -->
+
+<div class="clients_speak_section">
+  <div class="container">
+      <div class="common_tittle text-center">
+          What Our Clients <span>Say</span>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-6 col-lg-6 clients_speak_box">
+              <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                  <div class="row">
+                      
+                      <%= image_tag("library_logo.gif", class: "img-responsive img_border center-block") %>
+
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                  <div class="client_comment">
+                        I tell you guys, this is one of the best service dedicated towards library and scholarly community, you are our hero's.
+                        <b>- a Germany based University Library Librarian.</b>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xs-12 col-md-6 col-lg-6 clients_speak_box">
+              <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                  <div class="row">
+                      
+                      <%= image_tag("library_logo.gif", class: "img-responsive img_border center-block") %>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                  <div class="client_comment">
+                        I tell you guys, this is one of the best service dedicated towards library and scholarly community, you are our hero's.
+                        <b>- a Germany based University Library Librarian.</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+          
+          <%= image_tag("nav_point.png", width: '200', height: '100', alt: 'Logo', class: "img-responsive center-block") %>
+
+        </div>
+     </div>
+</div>
+
+<!-- / clients_section end --> 
+    
+<!-- / contact_section -->
+
+<div id="contact_section">
+  <div class="container">
+      <div class="common_tittle text-center">
+          Contact Us <span>Here</span>
+        </div>
+        <div class="common_tittle_info text-center">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br>
+tandard dummy text ever since the 1500s,
+        </div>
+        
+        <div class="row">
+          <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8">
+              <div class="common_form">
+
+                <%= form_for :contactu, url: contact_us_path do |f| %>
+                 
+                    <div class="field">
+                      <%= f.label :name %>
+                      <%= f.text_field :name, class: "form-control" %>
+                    </div>
+
+                    <div class="field">
+                      <%= f.label :email %>
+                      <%= f.text_field :email, class: "form-control"%>
+                    </div>
+
+                    <div class="field">
+                      <%= f.label :subject %>
+                      <%= f.text_field :subject, class: "form-control"%>
+                    </div>
+
+                    <div class="field">
+                      <%= f.label :message %>
+                      <%= f.text_area :message, class: "form-control"%>
+                    </div>
+
+                    <div class = "field">
+                    <%= f.submit "send message", class: "btn btn-primary" %>
+                    </div>
+                  <% end %>
+                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
+              <div class="contact_detail_box">
+                  <div class="address_section">
+                    <div class="icon">
+                        <%= image_tag("location.png") %>
+                    </div>
+                    <div class="address_detail">
+                      <h5>Address</h5>
+                        <p>
+                          MPS LIMITED C35, Sector 62<br>
+              Noida - 201307<br>
+              INDIA
+                        </p>
+                    </div>
+                    </div>
+                    
+                    <div class="address_section">
+                    <div class="icon">
+                        <%= image_tag("mail.png") %>
+                    </div>
+                    <div class="address_detail">
+                      <h5>Email</h5>
+                        <p>
+                          <a href="mailto:marketing@adi-mps.com">marketing@adi-mps.com</a>
+                        </p>
+                    </div>
+                    </div>
+                    
+                    <div class="address_section">
+                    <div class="icon">
+                      <%= image_tag("phone.png") %>
+                    </div>
+                    <div class="address_detail">
+                      <h5>Phone</h5>
+                        <p>1(800) 220 084</p>
+                    </div>
+                    </div>
+                    <div class="address_section">
+                    <div class="icon">
+                        <%= image_tag("web.png") %>
+                    </div>
+                    <div class="address_detail">
+                      <h5>Website</h5>
+                        <p><a href="www.mpsscholarlystats.com" target="www.mpsscholarlystats.com">www.mpsscholarlystats.com</a></p>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+<!-- / contact_section end --> 
+    
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="jquery.min.js"></script>
+    
+    
+    <script>
+    $(function() {
+          $('.scroll').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
+  </script>
+    <script>
+    $(function() {
+    $('.nav a').on('click', function(){ 
+      if($('.navbar-toggle').css('display') !='none'){
+        $( <%= link_to "login" , new_user_url %>)
+        $(".navbar-toggle").trigger( "click" );
+      }
+    });
+  });
+    </script>
+<script>
+        $( document ).ready(function() {
+             $('#requesterFirstNameId').on('keyup', function() {
+                var RegExpression = /^[a-zA-Z\s]*$/; 
+                if (RegExpression.test($('#requesterFirstNameId').val())) {
+                } 
+                else {
+               alert("First & Last Name can contain only characters and space.");
+                    $('#requesterFirstNameId').val("");
+                }
+             });
+          });
+        
+        function submitForm(pubcode)
+        {
+          var username=document.getElementById("username").value;
+          document.getElementById("j_username").value=username+"<::>"+pubcode;
+        }
+        
+        function validateAndSubmitForm(){
+           var objForm= document.getElementById("sendDemoRequestId");
+           objForm.action="/libraries/sendLibDemoRequest";
+           objForm.submit();
+           return true;
+        }
+    
+    function submitSubs(){
+           var objForm= document.getElementById("subsForm");
+           objForm.action="/subsNewsletter";
+           objForm.submit();
+           return true;
+        }
+        
+        </script>
+
+
+ </body>
+</html>

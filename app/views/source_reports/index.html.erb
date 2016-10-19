@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Source Reports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Reportname</th>
+      <th>Description</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @source_reports.each do |source_report| %>
+      <tr>
+        <td><%= source_report.reportname %></td>
+        <td><%= source_report.description %></td>
+        <td><%= source_report.year %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Source Report', new_source_report_path %>
+<%= link_to "home",users_url %>

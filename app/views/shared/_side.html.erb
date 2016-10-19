@@ -1,0 +1,63 @@
+<div class="navbar navbar-sidebar-nav" id="accordion" style="width:300px">
+  <div class="clearfix">
+        <div class="container" style="position: auto; ">
+                  <div class="panel-group" >
+                    <div class="heading">
+                     <a class="scroll">
+                        <%= image_tag("home.png",width: '20', height:'20') %>
+                          <%= link_to "Home" , loginpage_index_path%>
+                        </a>
+                  </div>
+                  </div>
+          <div class="panel-group">
+            <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse1">Reports</a>
+                      </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                      <ul class="list-group">
+                        <li class="list-group-item"><a href="counterandcustoms#new">COUNTER and Custom Reports </a></li>
+                        <li class="list-group-item"><a href="source_reports#new">
+                        Source Reports</a></li>
+                        <li class="list-group-item"><a href="">Dynamic Reports</a></li>
+                        <li class="list-group-item"><a>Search By ISSN/ISBN</a></li>
+                      </ul>
+                   </div>
+              
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse2">Administrative features</a>
+                      </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                      <ul class="list-group">
+                        <li class="list-group-item"><a>Selected Platforms </a></li>
+                        <li class="list-group-item"><a href="source_reports#new">
+                        Access Details</a></li>
+                        <li class="list-group-item"><a href="library_accounts#index">Library Account Details</a></li>
+                        <li class="list-group-item"><a>Integration Partners</a></li>
+                        <li class="list-group-item"><a href="http://localhost:3000/users/new">Create Additional User Accounts</a></li>
+                        <li class="list-group-item"><a href="http://localhost:3000/uploads">Upload Data</a></li>
+                        <li class="list-group-item"><a href="export_file#show">Export Data</a></li>
+                      </ul>
+                   </div>
+                   <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse3">Support</a>
+                      </h4>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse">
+                      <ul class="list-group">
+                        <li class="list-group-item"><a href="cont">Contact Us</a></li>
+                        <li class="list-group-item"><a href="http://localhost:3000/faqs/index">
+                        FAQs</a></li>
+                        <li class="list-group-item"><%=link_to "About Us", about_index_path%></li>
+                      </ul>
+                   </div>
+            </div>
+          </div>
+        </div>
+  </div>    
+</div>

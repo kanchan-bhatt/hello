@@ -1,0 +1,43 @@
+<%= form_for(import_file) do |f| %>
+  <% if import_file.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(import_file.errors.count, "error") %> prohibited this import_file from being saved:
+      </h2>
+
+      <ul>
+      <% import_file.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cost_data_file_name %>
+    <%= f.text_field :cost_data_file_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cost_data_content_type %>
+    <%= f.text_field :cost_data_content_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cost_data_file_size %>
+    <%= f.text_field :cost_data_file_size %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cost_data_updated_at %>
+    <%= f.text_field :cost_data_updated_at %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

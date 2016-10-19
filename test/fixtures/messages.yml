@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subject: MyString
+  query: MyString
+  msg: MyString
+  send: false
+
+two:
+  subject: MyString
+  query: MyString
+  msg: MyString
+  send: false

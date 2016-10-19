@@ -1,0 +1,1 @@
+json.array! @counterandcustoms, partial: 'counterandcustoms/counterandcustom', as: :counterandcustom
